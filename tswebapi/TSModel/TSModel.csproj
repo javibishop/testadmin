@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NH\**" />
+    <EmbeddedResource Remove="NH\**" />
+    <None Remove="NH\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="CodeGeneration\CustomCandidateNamingService.cs" />
+    <Compile Remove="CodeGeneration\DesignTimeServices.cs" />
+    <Compile Remove="CodeGeneration\Pluralizer.cs" />
+    <Compile Remove="Modelo.cs" />
+    <Compile Remove="ModeloMeta.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CodeGeneration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
